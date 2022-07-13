@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
+
 import silent from "../assets/silent.svg";
 
 class MyNavbar extends Component {
