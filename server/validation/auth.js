@@ -6,7 +6,6 @@ const registerSchema = Joi.object({
 		.trim()
 		.min(3)
 		.max(30)
-		.alphanum()
 		.error(() => new Error("Invalid name")),
 	email: Joi.string()
 		.email()

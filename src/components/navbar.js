@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import silent from "../assets/silent.svg";
 
@@ -8,7 +9,7 @@ class MyNavbar extends Component {
 		return (
 			<Navbar collapseOnSelect expand="lg">
 				<Container>
-					<Navbar.Brand href="#home" className="text-softpurple">
+					<Link to="/" className="text-softpurple text-decoration-none">
 						<img
 							src={silent}
 							width="30"
@@ -17,11 +18,12 @@ class MyNavbar extends Component {
 							alt="React Bootstrap logo"
 						/>
 						Hush-Hush
-					</Navbar.Brand>
+					</Link>
+
 					<Nav className="ms-auto">
-						<Nav.Link href="#deets" className="text-softpurple">
+						<Link to="/login" className="text-softpurple text-decoration-none">
 							Login
-						</Nav.Link>
+						</Link>
 					</Nav>
 				</Container>
 			</Navbar>
