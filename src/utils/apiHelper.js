@@ -1,4 +1,9 @@
 import axios from "axios";
+
+import { config } from "../config/config";
+
+const apiURL = config.apiURL;
+
 const apiCaller = async (apiConfig) => {
 	try {
 		const result = await axios(apiConfig);
@@ -15,7 +20,7 @@ const apiCaller = async (apiConfig) => {
 const loginRequest = async (email, pass) => {
 	const result = await apiCaller({
 		method: "post",
-		url: "http://localhost:7500/api/auth/login",
+		url: `${apiURL}/auth/login`,
 		data: {
 			email,
 			pass,
@@ -27,7 +32,7 @@ const loginRequest = async (email, pass) => {
 const registerRequest = async (name, email, pass, cpass) => {
 	const result = await apiCaller({
 		method: "post",
-		url: "http://localhost:7500/api/auth/register",
+		url: `${apiURL}/auth/register`,
 		data: {
 			name,
 			email,
